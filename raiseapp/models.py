@@ -63,6 +63,7 @@ class Reward(models.Model):
     campaign = models.ForeignKey(Campaign, on_delete=models.CASCADE)
     amount = models.IntegerField()
     description = models.TextField()
+    timeframe = models.TextField(blank=True)
 
     @property
     def display_amount(self):
