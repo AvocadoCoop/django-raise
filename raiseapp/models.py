@@ -64,6 +64,11 @@ class Reward(models.Model):
     amount = models.IntegerField()
     description = models.TextField()
 
+    @property
+    def display_amount(self):
+        # TODO: If you wanted to do currencies you would do it here
+        return str(self.amount)
+
     def __str__(self):
         return self.display_amount
 
