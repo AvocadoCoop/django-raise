@@ -27,7 +27,6 @@ class Campaign(models.Model):
             else:
                 self._raised = pledge_sum
 
-        print(self._raised)
         return self._raised
 
     @property
@@ -64,6 +63,9 @@ class Reward(models.Model):
     amount = models.IntegerField()
     description = models.TextField()
     timeframe = models.TextField(blank=True)
+
+    class Meta:
+        ordering = ['amount']
 
     @property
     def display_amount(self):
