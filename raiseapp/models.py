@@ -95,6 +95,8 @@ class Pledge(models.Model):
     name = models.CharField(max_length=256)
     amount = models.IntegerField()
 
+    comments = models.TextField(blank=True)
+
     active = models.BooleanField(default=True)
 
     created = models.DateTimeField(auto_now_add=True)
