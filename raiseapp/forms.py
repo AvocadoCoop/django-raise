@@ -18,4 +18,5 @@ class PledgeForm(forms.ModelForm):
             'email',
             'name',
             'amount',
+            'comments',
         ]
